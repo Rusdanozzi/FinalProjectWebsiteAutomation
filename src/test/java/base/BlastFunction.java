@@ -29,6 +29,8 @@ public class BlastFunction {
     private WebElement textTitleAfterBlast;
     @FindBy(id = "notistack-snackbar")
     private WebElement textSuccessCreateBlast;
+    @FindBy(css = ".GeneralSubNavBar_title__text__3UFWr > h1")
+    private WebElement textSubNavigationBar;
 
     public void setBlastPage(){blastPage.click();}
     public void setButtonCreateBlast(){buttonCreateBlast.click();}
@@ -40,7 +42,11 @@ public class BlastFunction {
     public void verifySuccessCreateBlast(String Title) throws InterruptedException {
 
         Assert.assertEquals("Create post successful",textSuccessCreateBlast.getText());
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         Assert.assertEquals(Title,textTitleAfterBlast.getText());
+    }
+    public void verifyBlastPage(){
+
+        Assert.assertEquals("Blasts",textSubNavigationBar.getText());
     }
 }

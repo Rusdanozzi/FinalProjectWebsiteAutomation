@@ -14,8 +14,9 @@ Feature: Send Chat to group chat
     And user delete chat
     Then chat message will show"This message was deleted"
 
-  @PositiveCase
-  Scenario: user success attach file
+  @NegativeCase
+  Scenario: user can't send blank message
     Given user in chat page
-    When user attach file"Nickel.png"
-    Then user success atach file
+    When send chat message""
+    Then chat will not send
+

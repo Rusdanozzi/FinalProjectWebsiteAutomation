@@ -56,4 +56,9 @@ public class GroupChatStep {
         GroupChatFunction groupChatFunction=new GroupChatFunction(webDriver);
         groupChatFunction.attachFile(File);
     }
+
+    @Then("chat will not send")
+    public void chatWillNotSend() {
+
+    }
 }

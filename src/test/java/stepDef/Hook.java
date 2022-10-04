@@ -49,8 +49,8 @@ public class Hook {
         webDriver.findElement(By.xpath("//div[@class='Card_Card__2LWWW']")).click();
     }
 
-/*    @After
+    @After
     public static void closeBrowser(){
         webDriver.quit();
-    }*/
+    }
 }

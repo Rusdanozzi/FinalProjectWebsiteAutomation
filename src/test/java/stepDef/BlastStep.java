@@ -58,4 +58,17 @@ public class BlastStep {
         blastFunction.setButtonPublish();
         Thread.sleep(2000);
     }
+
+    @And("user cancel create blast")
+    public void userCancelCreateBlast() {
+        BlastFunction blastFunction=new BlastFunction(webDriver);
+        blastFunction.setButtonCancel();
+    }
+
+    @Then("user direct to blast page")
+    public void userDirectToBlastPage() throws InterruptedException {
+        BlastFunction blastFunction=new BlastFunction(webDriver);
+        Thread.sleep(5000);
+        blastFunction.verifyBlastPage();
+    }
 }

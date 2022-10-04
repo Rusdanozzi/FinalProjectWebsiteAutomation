@@ -22,6 +22,7 @@ public class GroupChatFunction {
     private WebElement buttonSend;
     @FindBy(xpath = "//div[@class='infinite-scroll-component ']/div[1]//div[@class='Message_content__21YIN']")
     private WebElement textChat;
+    //DIV selisih 2//
     @FindBy(xpath = "//div[@class='infinite-scroll-component ']//div[1]//div[@class='Message_balloonMessage__3dmkS']")
     private WebElement messageHover;
     @FindBy(xpath = "//body/div[@id='root']/div[@class='GroupChatPage_container__2cpwQ']/" +
@@ -49,10 +50,10 @@ public class GroupChatFunction {
         action.moveToElement(messageHover).perform();
         messageOption.click();
         messageDelete.click();
-        buttonConfirmDelete.click();
-    }
-
+        buttonConfirmDelete.click();}
     public void attachFile(String File){
-        buttonAttach.sendKeys(File);
+        buttonAttach.sendKeys(File);}
+    public void verifyNothingHappened(){
+        Assert.assertNotEquals("",textChat);
     }
 }
