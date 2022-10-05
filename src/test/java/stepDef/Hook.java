@@ -35,7 +35,8 @@ public class Hook {
 
         chrome_options.addArguments("user_agent=DN");
 
-        chrome_options.addArguments("user-data-dir=C:\\Users\\PC\\AppData\\Local\\Google\\Chrome\\User Data\\");
+/*        chrome_options.addArguments("user-data-dir=C:\\Users\\PC\\AppData\\Local\\Google\\Chrome\\User Data\\");*/
+        chrome_options.addArguments("user-data-dir=C:\\Users\\DELL 2021\\AppData\\Local\\Google\\Chrome\\User Data\\");
 
         chrome_options.addArguments("--profile-directory=default");
 
@@ -49,8 +50,8 @@ public class Hook {
         webDriver.findElement(By.xpath("//div[@class='Card_Card__2LWWW']")).click();
     }
 
-    @After
+/*    @After
     public static void closeBrowser(){
         webDriver.quit();
-    }
+    }*/
 }

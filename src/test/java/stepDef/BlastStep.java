@@ -71,4 +71,27 @@ public class BlastStep {
         Thread.sleep(5000);
         blastFunction.verifyBlastPage();
     }
+
+    @When("click newest blast")
+    public void clickNewestBlast() throws InterruptedException {
+        BlastFunction blastFunction=new BlastFunction(webDriver);
+        blastFunction.clickNewestBlast();
+        Thread.sleep(5000);
+    }
+
+    @And("input comment{string}")
+    public void inputComment(String Comment) throws InterruptedException {
+        BlastFunction blastFunction=new BlastFunction(webDriver);
+        blastFunction.clickComment();
+        Thread.sleep(3000);
+        blastFunction.setInputComment(Comment);
+        blastFunction.clickPublish();
+        Thread.sleep(5000);
+    }
+
+    @Then("comment {string} will be posted")
+    public void commentWillBePosted(String Text) {
+        BlastFunction blastFunction=new BlastFunction(webDriver);
+        blastFunction.verifyComment(Text);
+    }
 }

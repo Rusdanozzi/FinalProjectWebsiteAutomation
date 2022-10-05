@@ -23,3 +23,10 @@ Feature: Send Blast Message
     When create new blast message
     And user cancel create blast
     Then user direct to blast page
+
+  @PositiveCase
+  Scenario: user success add comment
+    Given user in blast page
+    When click newest blast
+    And input comment"ini Comment"
+    Then comment "ini Comment" will be posted
