@@ -1,4 +1,4 @@
-@Navigaiton
+@Navigation
 Feature: User can use navigation bar
 
   @PositiveCase
@@ -6,7 +6,7 @@ Feature: User can use navigation bar
     Given user in home page
     When user click option button
     And user click overview button
-    Then home will be showed"QA-14-BP-A"
+    Then home will be showed"QA-14-BP-A2"
 
   @PositiveCase
   Scenario: User success open blast page
@@ -20,7 +20,7 @@ Feature: User can use navigation bar
     Given user in home page
     When user click option button
     And user click board button
-    Then home will be showed"Board - QA-14-BP-A"
+    Then home will be showed"Board - QA-14-BP-A2"
 
   @PositiveCase
   Scenario: User success open check in page
@@ -41,7 +41,7 @@ Feature: User can use navigation bar
     Given user in home page
     When user click option button
     And user click group chat button
-    Then home will be showed"Group Chat - QA-14-BP-A"
+    Then home will be showed"Group Chat - QA-14-BP-A2"
 
   @PositiveCase
   Scenario: User success open doc & file page

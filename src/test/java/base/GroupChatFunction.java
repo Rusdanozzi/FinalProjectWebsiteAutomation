@@ -36,8 +36,10 @@ public class GroupChatFunction {
     private WebElement messageDelete;
     @FindBy(xpath = "//div[@class='modal-footer']//button[@type='button']")
     private WebElement buttonConfirmDelete;
-    @FindBy(xpath = "//div[@class='AttachFileContainer_container__3U9Wh']")
+    @FindBy(xpath = "//input[@type='file']")
     private WebElement buttonAttach;
+    @FindBy(xpath = "//p[.='Nickel.png']")
+    private WebElement textNickel;
 
     public void clickGroupChat(){groupChatPage.click();}
     public void setInputChat(String Chat){inputChat.sendKeys(Chat);}
@@ -51,8 +53,11 @@ public class GroupChatFunction {
         messageOption.click();
         messageDelete.click();
         buttonConfirmDelete.click();}
-    public void attachFile(String File){
-        buttonAttach.sendKeys(File);}
+    public void attachFile(){
+        buttonAttach.sendKeys("C:\\Nickel.png");}
+    public void verifyFileUploaded(){
+        Assert.assertEquals("Nickel.png",textNickel.getText());
+    }
     public void verifyNothingHappened(){
         Assert.assertNotEquals("",textChat);
     }

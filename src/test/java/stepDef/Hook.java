@@ -35,8 +35,8 @@ public class Hook {
 
         chrome_options.addArguments("user_agent=DN");
 
-/*        chrome_options.addArguments("user-data-dir=C:\\Users\\PC\\AppData\\Local\\Google\\Chrome\\User Data\\");*/
-        chrome_options.addArguments("user-data-dir=C:\\Users\\DELL 2021\\AppData\\Local\\Google\\Chrome\\User Data\\");
+        chrome_options.addArguments("user-data-dir=C:\\Users\\PC\\AppData\\Local\\Google\\Chrome\\User Data\\");
+/*        chrome_options.addArguments("user-data-dir=C:\\Users\\DELL 2021\\AppData\\Local\\Google\\Chrome\\User Data\\");*/
 
         chrome_options.addArguments("--profile-directory=default");
 
@@ -47,7 +47,7 @@ public class Hook {
         webDriver.get("https://staging.cicle.app/signin");
         Thread.sleep(5000);
         webDriver.findElement(By.xpath("/html/body/div[2]/div[3]/div/div/div[2]/div[3]/div/div")).click();
-        webDriver.findElement(By.xpath("//div[@class='Card_Card__2LWWW']")).click();
+        webDriver.findElement(By.xpath("//a[.='QA-14-BP-A24']")).click();
     }
 
 /*    @After

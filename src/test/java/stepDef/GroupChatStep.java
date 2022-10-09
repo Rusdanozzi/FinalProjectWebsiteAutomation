@@ -51,14 +51,21 @@ public class GroupChatStep {
         groupChatFunction.deleteMessage();
     }
 
-    @When("user attach file{string}")
-    public void userAttachFile(String File) {
+    @When("user attach file")
+    public void userAttachFile() {
         GroupChatFunction groupChatFunction=new GroupChatFunction(webDriver);
-        groupChatFunction.attachFile(File);
+        groupChatFunction.attachFile();
     }
 
     @Then("chat will not send")
     public void chatWillNotSend() {
+        GroupChatFunction groupChatFunction=new GroupChatFunction(webDriver);
+        groupChatFunction.verifyNothingHappened();
+    }
 
+    @Then("user success send file")
+    public void userSuccessSendFile() {
+        GroupChatFunction groupChatFunction=new GroupChatFunction(webDriver);
+        groupChatFunction.verifyFileUploaded();
     }
 }

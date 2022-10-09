@@ -54,15 +54,29 @@ public class BoardStep {
         Thread.sleep(1000);
         boardFunction.verifySuccessCreateCard();
     }
-
     @When("move card to other list")
     public void moveCardToOtherList() throws InterruptedException {
+        BoardFunction boardFunction = new BoardFunction(webDriver);
+        boardFunction.moveCard();
 
     }
-
     @Then("card move success")
     public void cardMoveSuccess() {
 
-
     }
+    @When("user add comment in card{string}")
+    public void userAddCommentInCard(String comment) throws InterruptedException {
+        BoardFunction boardFunction = new BoardFunction(webDriver);
+        boardFunction.clickCardList1();
+        boardFunction.setInputComment(comment);
+    }
+
+
+    @Then("the comment will be post{string}")
+    public void theCommentWillBePost(String comment) {
+        BoardFunction boardFunction = new BoardFunction(webDriver);
+        boardFunction.verifyComment(comment);
+    }
+
+
 }
