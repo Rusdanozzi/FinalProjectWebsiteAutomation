@@ -50,8 +50,8 @@ public class Hook {
         webDriver.findElement(By.xpath("//a[.='QA-14-BP-A24']")).click();
     }
 
-/*    @After
+    @After
     public static void closeBrowser(){
         webDriver.quit();
-    }*/
+    }
 }

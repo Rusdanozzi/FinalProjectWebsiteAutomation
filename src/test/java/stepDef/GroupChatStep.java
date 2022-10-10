@@ -31,12 +31,6 @@ public class GroupChatStep {
 
     }
 
-    @Then("chat message will be sended")
-    public void chatMessageWillBeSended() throws InterruptedException {
-
-    }
-
-
     @Then("chat message will show{string}")
     public void chatMessageWillShow(String Chat) throws InterruptedException {
         GroupChatFunction groupChatFunction=new GroupChatFunction(webDriver);
@@ -46,7 +40,7 @@ public class GroupChatStep {
 
     @And("user delete chat")
     public void userDeleteChat() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(10000);
         GroupChatFunction groupChatFunction=new GroupChatFunction(webDriver);
         groupChatFunction.deleteMessage();
     }

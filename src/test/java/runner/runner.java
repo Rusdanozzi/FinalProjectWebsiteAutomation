@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/Feature",
         glue= {"stepDef"},
-        plugin = {"pretty", "html:target/cucumber-report-3.html"},
-        tags = "@GroupChat or @Board or @Blast or @Navigation"
+        plugin = {"pretty", "html:target/cucumber-report-final.html"},
+        tags = "@GroupChat"
 )
 
 public class runner {
